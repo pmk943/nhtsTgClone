@@ -7,8 +7,17 @@
     display:flex;
     align-items:center;
     
+    
 }
 .LoginHeaderElement__container:hover {
     cursor: pointer;
     background-color: rgb(76, 64, 145);
+}
+.LoginHeaderElement__container > a{
+    text-decoration: none;
+    padding:19px;
+}
+
+.isActive{
+    border-bottom: 3px solid red;
 }

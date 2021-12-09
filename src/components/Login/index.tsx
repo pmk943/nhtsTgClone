@@ -1,20 +1,21 @@
 import "./Login.css"
 import LoginHeader from "./LoginHeader"
+import {
+    Routes,
+    Route
+  } from "react-router-dom";
+import SignIn from "./SignIn";
 function Login() {
     return (
         <>
         <div className="Login_HeaderContainer">
             <LoginHeader />
         </div>
-        <div className="Login__container">
-            <img   src="images/LoginUser.png"/>
-            <h1>User Login</h1>
-            <form className="Login_form">
-                <input  type="text" placeholder="Username "  required/>
-                <input  type="text" placeholder="Password " required/>
-                <input type="submit" value="SIGN IN" style={{backgroundColor:"blue", color:"white" }}/>
-            </form>
-        </div>
+        <Routes>
+            <Route path="/login" element={<SignIn />} />
+        </Routes>
+        
+        
         </>
     )
 }
