@@ -1,0 +1,32 @@
+.Accordion__header{
+    background-color:#EAEAEA;
+    padding:10px;
+    display:flex;
+    position: relative;
+}
+.Accordion__header>span{
+
+    padding-left: 10px;
+
+}
+.Accordion__header:hover{
+    background-color:rgb(110, 182, 110);
+    cursor:pointer;
+    
+}
+.Accordion_child{
+color:black;
+padding:10px;
+display: block;
+text-decoration: none;
+background-color:#f5ecec;
+}
+.Accordion_child:hover{
+    cursor:pointer;
+    background-color:rgb(110, 182, 110);
+}
+.arrowIcon{
+    position: absolute;
+    right:10px;
+}
+

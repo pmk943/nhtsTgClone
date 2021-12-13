@@ -2,7 +2,8 @@ import "./Login.css"
 import LoginHeader from "./LoginHeader"
 import {
     Routes,
-    Route
+    Route,
+    Outlet
   } from "react-router-dom";
 import SignIn from "./SignIn";
 function Login() {
@@ -11,9 +12,9 @@ function Login() {
         <div className="Login_HeaderContainer">
             <LoginHeader />
         </div>
-        <Routes>
-            <Route path="/login" element={<SignIn />} />
-        </Routes>
+        <div>
+            <Outlet />
+        </div>
         
         
         </>
