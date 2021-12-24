@@ -4,7 +4,7 @@ import "./Accordion.css";
 type AccordionPropType = {
   iconname: string;
   name: string;
-  childnames: string[];
+  childnames: {name:string, url: string}[];
 };
 
 function Accordion({ iconname, name, childnames }: AccordionPropType) {
@@ -28,8 +28,8 @@ function Accordion({ iconname, name, childnames }: AccordionPropType) {
       {/* {isActive && childnames.map((child)=><div className="Accordion_child">{child}</div> )} */}
       {isActive &&
         childnames.map((child) => (
-          <NavLink to={`/${name}`} className="Accordion_child">
-            {child}
+          <NavLink to={child.url} className="Accordion_child">
+            {child.name}
           </NavLink>
         ))}
     </>
