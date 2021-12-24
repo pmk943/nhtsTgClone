@@ -1,14 +1,18 @@
 import { useState } from "react"
-import { REGISTRATION_DROPDOWN_OPTIONS } from "../../../utils/constants"
+import { REGISTRATION_DROPDOWN_OPTIONS  } from "../../../utils/constants"
 const projectName:string = REGISTRATION_DROPDOWN_OPTIONS.projectName
 function DropDownHeader() {
     const [sector, setSector]= useState(["select sector"])
-    const [awc, setAwc]= useState(["select awc"])
+    const [awcs, setAwc]= useState([])
+    const [selectedAwc, setSelecetdAwc]= useState("select awc")
 
     const onSectorChange = (e : any) =>{
-        const selectedSector = e.target.value;
-        
-
+        const selectedSector:string = e.target.value;
+        setAwc(REGISTRATION_DROPDOWN_OPTIONS.awcs[selectedSector])
+        setSelecetdAwc("select awc")
+    }
+    const onAwcChange = (e:any)=>{
+        setSelecetdAwc(e.target.value)
     }
     return (
         <form >
@@ -22,13 +26,13 @@ function DropDownHeader() {
                 Select Sector
                 <select onChange={e=>onSectorChange(e)}>
                     
-                    {REGISTRATION_DROPDOWN_OPTIONS.sectors.map((sector,idx) =>(idx===0 ?<option disabled selected >{sector}</option>:<option>{sector}</option>))}
+                    {REGISTRATION_DROPDOWN_OPTIONS.sectors.map((sector:string,idx:number) =>(idx===0 ?<option key={sector} disabled selected >{sector}</option>:<option key={sector}>{sector}</option>))}
                 </select>
             </label>
             <label >
                Select AWC 
-               <select >
-               {REGISTRATION_DROPDOWN_OPTIONS.sectors.map((sector,idx) =>(idx===0 ?<option disabled selected >{sector}</option>:<option>{sector}</option>))}
+               <select  onChange={onAwcChange} value={selectedAwc}>
+               {awcs.map((sector) =><option key={sector}>{sector}</option>)}
 
                </select>
             </label>
