@@ -8,10 +8,10 @@ function AdminHome() {
     return (
         <div className="AdminHome__container">
 
-            <nav>
+            <nav className="Admin__nav" >
                 <Sidebar />
             </nav>
-            <main>
+            <main className="Admin__main">
                 <header >
                     <Header/>
                 </ header>
@@ -21,6 +21,7 @@ function AdminHome() {
                 
                 <footer>
                     {/* Footer goes inside the main */}
+                    <p>© 2015 Women Development and Child Welfare Department, Govt. of Telangana.</p>
                 </footer>
             </main>
         </div>
