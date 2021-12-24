@@ -1,3 +1,27 @@
 .Header__conatiner{
     background-color:#3E4651;
+    display:flex;
+    justify-content: space-between;
+}
+.Header__conatiner__right{
+    display:flex;
+}
+.Header__conatiner__right>img {
+    height:100%;
+    padding: 0 5px;
+    cursor: pointer;
+}
+.Header__conatiner__right>button {
+    height:100%;
+    padding:0 5px;
+    cursor: pointer;
+    background-color:transparent;
+    border:none;
+
+}
+.Header__conatiner__right>img:hover {
+    background-color: greenyellow;
+}
+.Header__conatiner__right>button:hover {
+background-color: greenyellow;
 }
