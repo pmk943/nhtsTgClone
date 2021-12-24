@@ -13,7 +13,7 @@ const cardcomponents = CARDCONTENTS.map((card) => (
 ));
 function AdminMainPage() {
   return (
-    <div>{cardcomponents}</div>
+    <div className="card__container">{cardcomponents}</div>
     // <div className="parent">
     //     yellow Parent
     //     <div className="c1">Red Child</div>

@@ -1,3 +1,11 @@
 .AdminHome__container{
     display:flex;
 }
+
+.Admin__nav{
+flex:0.3
+}
+
+.Admin__main{
+flex:content;
+}
